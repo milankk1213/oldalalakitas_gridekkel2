@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(155, 151, 151);
+    text-align: justify;
+}
+
+nav {
+    background-color: rgb(53, 80, 156);
+}
+
+
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    list-style: none;
+    
+}
+
+nav ul a {
+    text-decoration: none;
+    color: yellow;
+}
+
+
+.tartalmak{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+
+main{
+    display: grid;
+    grid-template-columns: 2fr 7fr 3fr;
+        grid-template-areas: "h h h"
+                        "n n n"
+                        "s ar as"
+                        "f f f";
+}
+
+
+header, nav, section, article, aside, footer {
+    margin: 3px;
+    border: 2px solid black;
+    padding: 6px;
+}
+
+
+header{
+    grid-area: h;
+    padding: 5px;
+}
+
+nav {
+    grid-area: n;
+}
+
+section {
+        grid-area: s;
+}
+
+article {
+        grid-area: ar;
+
+}
+
+aside {
+        grid-area: as;
+
+
+}
+
+footer {
+    grid-area: f;
+}
+
+
+article .tartalmak {
+    border: 2px solid black;
+}
+
+article .tart1, .tart2 {
+    border: 2px solid black;
+    margin: 2px;
+        padding: 6px;
+
+}
+
+
+
+
+@media screen and (max-width: 700px){
+    main{
+    grid-template-columns: 1fr;
+        grid-template-areas: "h"
+                        "n"
+                        "ar"
+                        "as"
+                        "s"
+                        "f";
+}
+}
+
+
+@media screen and (max-width: 600px){
+    nav ul{
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+}
+
+
